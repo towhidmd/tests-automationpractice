@@ -12,16 +12,16 @@ public class ProductPage extends PageHelper {
 	}
 
 	public void clickOnAddToCart(String productName) {
-		driver.findElement(By
-				.xpath("//*[@class='inventory_item_name'][contains(text(),'" + productName + "')]//..//..//..//button"))
-				.click();
+		driver.findElement(By.xpath(
+				"//*[@class='inventory_item_name'][contains(text(),'" + productName + "')]//..//..//..//button"));
+
 	}
 
 	public void clickOnCart() {
-		driver.findElement(By.className("shopping_cart_link")).click();
+		driver.findElement(By.className("shopping_cart_link"));
 	}
 
 	public String getCartBadgeQuantity() {
-		return driver.findElement(By.className("shopping_cart_badge")).getText();
+		return getText(By.className("shopping_cart_badge"));
 	}
 }

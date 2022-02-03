@@ -10,7 +10,7 @@ import helper.TestHelper;
 public class LoginTest extends TestHelper {
 
 	@Test
-	public void loginWithValidSata() {
+	public void loginWithValidData() {
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.submitLogin(Constants.USERNAME, Constants.PASSWORD);
 
